@@ -1,35 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
     android:id="@+id/background"
-    android:background="@color/teal">
+    android:background="@color/teal"
+    android:weightSum="1">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_weight="0.24"
+        android:src="@drawable/logo"/>
 
     <TextView
         android:id="@+id/tv_welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dimen_6_10dp"
         android:text="@string/welcome"
-        android:textStyle="bold"
+        android:textColor="@color/white"
         android:textSize="@dimen/text_size_24"
-        android:textColor="@color/white"/>
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/iv_money"
-        android:layout_marginTop="@dimen/dimen_3_10dp"
-        android:contentDescription="@string/money_desc"
-        android:src="@drawable/ic_action"
         android:layout_width="@dimen/dimen_6_10dp"
         android:layout_height="@dimen/dimen_6_10dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/money_desc"
         android:scaleType="centerCrop"
-        android:adjustViewBounds="true"/>
+        android:src="@drawable/ic_action" />
 
     <TextView
         android:id="@+id/tv_first_desc"
-        android:layout_marginTop="@dimen/dimen_10dp"
-        android:text="@string/welcome_first_page"
-        style="@style/WelcomeDescription" />
+        style="@style/WelcomeDescription"
+        android:text="@string/welcome_first_page" />
 
 </LinearLayout>
